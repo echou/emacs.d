@@ -12,8 +12,9 @@
 (setq indicate-empty-lines t)
 
 ;; NO tool bar or scroll bar
-(when (fboundp 'tool-bar-mode)
-  (tool-bar-mode -1))
+;(when (fboundp 'tool-bar-mode)
+;  (tool-bar-mode 1))
+;
 (when (fboundp 'set-scroll-bar-mode)
   (set-scroll-bar-mode nil))
 
