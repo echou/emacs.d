@@ -27,7 +27,20 @@
 	  (plantuml . t)))
 
 (setq org-src-fontify-natively t)
-(setq org-plantuml-jar-path "~/plantuml.jar")
+(setq org-plantuml-jar-path "~/.emacs.d/scripts/plantuml.jar")
 
 ;(org-display-inline-images t t)
+
+(setq my-org-directory "~/Library/Mobile Documents/com~apple~CloudDocs/org-files/")
+
+(setq org-default-notes-file (concat my-org-directory "notes/notes.org"))
+(define-key global-map "\C-cc" 'org-capture)
+
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline (concat my-org-directory "notes/gtd.org") "Tasks")
+             "* TODO %?\n  %i\n  %a")
+        ("j" "Journal" entry (file+datetree (concat my-org-directory "notes/journal.org"))
+             "* %?\nEntered on %U\n  %i\n  %a")))
+
+
 
