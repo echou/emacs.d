@@ -303,7 +303,7 @@
 
 ;effective emacs item 7; no scrollbar, no menubar, no toolbar
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+;(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 
 ;; {{ @see http://emacsredux.com/blog/2013/04/21/edit-files-as-root/
 (defun sudo-edit (&optional arg)

@@ -297,5 +297,6 @@ ARCHIVE is the string name of the package archive.")
 (require-package 'graphviz-dot-mode)
 (require-package 'puml-mode)
 (require-package 'hydra)
+(require-package 'clojure-mode)
 
 (provide 'init-elpa)
