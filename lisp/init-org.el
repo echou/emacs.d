@@ -1,3 +1,4 @@
+
 ;; some cool org tricks
 ;; @see http://emacs.stackexchange.com/questions/13820/inline-verbatim-and-code-with-quotes-in-org-mode
 
@@ -139,6 +140,7 @@
   '(progn
      (setq org-imenu-depth 9)
      (require 'org-clock)
+	 (require 'org-bullets)
      ;; @see http://irreal.org/blog/1
      (setq org-src-fontify-natively t)))
 
@@ -154,9 +156,12 @@
   ;; don't spell check double words
   (setq flyspell-check-doublon nil)
 
+  (org-bullets-mode 1)
+
   ;; display wrapped lines instead of truncated lines
   (setq truncate-lines nil)
   (setq word-wrap t))
+
 (add-hook 'org-mode-hook 'org-mode-hook-setup)
 
 (defadvice org-open-at-point (around org-open-at-point-choose-browser activate)
@@ -184,5 +189,7 @@
       '(elisp "lisp"
               emacs-lisp "lisp"))
 ;; }}
+
+
 
 (provide 'init-org)
