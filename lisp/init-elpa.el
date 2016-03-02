@@ -118,6 +118,7 @@ ARCHIVE is the string name of the package archive.")
     w3m
     erlang
     company-c-headers
+	puml-mode
     ;; make all the color theme packages available
     afternoon-theme
     define-word
@@ -293,6 +294,8 @@ ARCHIVE is the string name of the package archive.")
 (require-package 'neotree)
 (require-package 'define-word)
 (require-package 'quack) ;; for scheme
+(require-package 'graphviz-dot-mode)
+(require-package 'puml-mode)
 (require-package 'hydra)
 (require-package 'clojure-mode)
 (require-package 'org-bullets)
