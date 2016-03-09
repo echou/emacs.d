@@ -70,7 +70,8 @@
   (when (boundp 'company-backends)
     (make-local-variable 'company-backends)
     (add-to-list 'company-backends 'company-ispell)
-    (setq company-ispell-dictionary ispell-alternate-dictionary)))
+    ;(setq company-ispell-dictionary ispell-alternate-dictionary)
+	))
 
 ;; message-mode use company-bbdb.
 ;; So we should NOT turn on company-ispell

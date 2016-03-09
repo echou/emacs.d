@@ -166,3 +166,18 @@
 (setq cal-china-x-important-holidays cal-china-x-chinese-holidays)
 (setq calendar-holidays cal-china-x-important-holidays)
 
+(set-locale-environment "zh_CN.utf-8")
+(setq-default org-display-custom-times t)
+(setq org-time-stamp-custom-formats '("<%Y-%m-%d %A>" . "<%Y-%m-%d %A %H:%M>"))
+
+
+(setq face-font-rescale-alist
+	  '(
+		(".*Kaiti SC.*" . 1.2)
+		(".*PingFang SC.*" . 1.2)
+     	(".*Heiti SC.*" . 1.1)))
+
+(setq org-src-fontify-natively t)
+(setq org-plantuml-jar-path "~/.emacs.d/scripts/plantuml.jar")
+
+(setq my-org-directory "~/Library/Mobile Documents/com~apple~CloudDocs/org-files/")
