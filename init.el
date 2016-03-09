@@ -64,42 +64,42 @@
 (require 'init-git)
 (require 'init-crontab)
 (require 'init-markdown)
-(require 'init-erlang)
-(require 'init-javascript)
+;(require 'init-erlang)
+;(require 'init-javascript)
 (require 'init-org)
 (require 'init-org-mime)
 (require 'init-css)
 (require 'init-python-mode)
-(require 'init-haskell)
-(require 'init-ruby-mode)
+;(require 'init-haskell)
+;(require 'init-ruby-mode)
 (require 'init-lisp)
 (require 'init-elisp)
 (require 'init-yasnippet)
 ;; Use bookmark instead
 (require 'init-zencoding-mode)
-(require 'init-cc-mode)
-(require 'init-gud)
-(require 'init-linum-mode)
+;(require 'init-cc-mode)
+;(require 'init-gud)
+;(require 'init-linum-mode)
 ;; (require 'init-gist)
-(require 'init-moz)
-(require 'init-gtags)
+;(require 'init-moz)
+;(require 'init-gtags)
 ;; use evil mode (vi key binding)
-(require 'init-evil)
-(require 'init-sh)
-(require 'init-ctags)
+;(require 'init-evil)
+;(require 'init-sh)
+;(require 'init-ctags)
 (require 'init-bbdb)
-(require 'init-gnus)
-(require 'init-lua-mode)
-(require 'init-workgroups2)
+;(require 'init-gnus)
+;(require 'init-lua-mode)
+;(require 'init-workgroups2)
 (require 'init-term-mode)
-(require 'init-web-mode)
-(require 'init-slime)
+;(require 'init-web-mode)
+;(require 'init-slime)
 (require 'init-clipboard)
 (require 'init-company)
 (require 'init-chinese-pyim) ;; cannot be idle-required
 ;; need statistics of keyfreq asap
-(require 'init-keyfreq)
-(require 'init-httpd)
+;(require 'init-keyfreq)
+;(require 'init-httpd)
 
 ;; projectile costs 7% startup time
 
@@ -111,6 +111,7 @@
 
 (require 'init-emacs-w3m)
 (require 'init-hydra)
+
 
 ;; {{ idle require other stuff
 (setq idle-require-idle-delay 3)
@@ -150,15 +151,18 @@
  '(git-gutter:handled-backends (quote (svn hg git)))
  '(safe-local-variable-values (quote ((lentic-init . lentic-orgel-org-init))))
  '(session-use-package t nil (session)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(window-numbering-face ((t (:foreground "DeepPink" :underline "DeepPink" :weight bold))) t))
 
 (setq gc-cons-threshold best-gc-cons-threshold)
+
 ;;; Local Variables:
 ;;; no-byte-compile: t
 ;;; End:
 (put 'erase-buffer 'disabled nil)
+
+(require 'cal-china-x)
+(require 'chinese-fonts-setup)
+
+(setq mark-holidays-in-calendar t)
+(setq cal-china-x-important-holidays cal-china-x-chinese-holidays)
+(setq calendar-holidays cal-china-x-important-holidays)
+
