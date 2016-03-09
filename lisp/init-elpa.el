@@ -108,7 +108,7 @@ ARCHIVE is the string name of the package archive.")
     dired+
     inflections
     dropdown-list
-    lua-mode
+    ;lua-mode
     tidy
     pomodoro
     auto-compile
@@ -199,25 +199,25 @@ ARCHIVE is the string name of the package archive.")
 (require-package 'avy)
 (require-package 'expand-region) ;; I prefer stable version
 (require-package 'fringe-helper)
-(require-package 'haskell-mode)
+;(require-package 'haskell-mode)
 (require-package 'gitignore-mode)
 (require-package 'gitconfig-mode)
 (require-package 'yagist)
 (require-package 'wgrep)
-(require-package 'lua-mode)
+;(require-package 'lua-mode)
 (require-package 'robe)
-(require-package 'inf-ruby)
+;(require-package 'inf-ruby)
 (require-package 'workgroups2)
 (require-package 'yaml-mode)
 (require-package 'paredit)
-(require-package 'erlang)
+;(require-package 'erlang)
 (require-package 'findr)
 (require-package 'jump)
 (require-package 'nvm)
-(require-package 'writeroom-mode)
-(require-package 'haml-mode)
-(require-package 'sass-mode)
-(require-package 'scss-mode)
+;(require-package 'writeroom-mode)
+;(require-package 'haml-mode)
+;(require-package 'sass-mode)
+;(require-package 'scss-mode)
 (require-package 'markdown-mode)
 (require-package 'dired+)
 (require-package 'link)
@@ -298,5 +298,6 @@ ARCHIVE is the string name of the package archive.")
 (require-package 'puml-mode)
 (require-package 'hydra)
 (require-package 'clojure-mode)
+(require-package 'org-bullets)
 
 (provide 'init-elpa)

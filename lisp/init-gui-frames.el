@@ -3,7 +3,7 @@
 ;;----------------------------------------------------------------------------
 (setq use-file-dialog nil)
 (setq use-dialog-box nil)
-(setq inhibit-startup-screen t)
+(setq inhibit-startup-screen f)
 (setq inhibit-startup-echo-area-message t)
 
 ;;----------------------------------------------------------------------------
@@ -12,8 +12,8 @@
 (setq indicate-empty-lines t)
 
 ;; NO tool bar or scroll bar
-;(when (fboundp 'tool-bar-mode)
-;  (tool-bar-mode 1))
+(when (fboundp 'tool-bar-mode)
+  (tool-bar-mode 0))
 ;
 (when (fboundp 'set-scroll-bar-mode)
   (set-scroll-bar-mode nil))
