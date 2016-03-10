@@ -72,7 +72,7 @@
 ;(require 'init-python-mode)
 ;(require 'init-haskell)
 ;(require 'init-ruby-mode)
-;(require 'init-lisp)
+(require 'init-lisp)
 (require 'init-elisp)
 (require 'init-yasnippet)
 ;; Use bookmark instead
@@ -84,10 +84,10 @@
 ;(require 'init-moz)
 ;(require 'init-gtags)
 ;; use evil mode (vi key binding)
-(require 'init-evil)
-(require 'init-sh)
+;(require 'init-evil)
+;(require 'init-sh)
 ;(require 'init-ctags)
-(require 'init-bbdb)
+;(require 'init-bbdb)
 ;(require 'init-gnus)
 ;(require 'init-lua-mode)
 ;(require 'init-workgroups2)
@@ -95,7 +95,7 @@
 ;(require 'init-web-mode)
 ;(require 'init-slime)
 (require 'init-clipboard)
-(require 'init-company)
+;(require 'init-company)
 (require 'init-chinese-pyim) ;; cannot be idle-required
 ;; need statistics of keyfreq asap
 ;(require 'init-keyfreq)
