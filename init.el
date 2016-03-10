@@ -59,27 +59,27 @@
 (require 'init-helm)
 (require 'init-ivy)
 (require 'init-hippie-expand)
-(require 'init-windows)
-(require 'init-sessions)
+;(require 'init-windows)
+;(require 'init-sessions)
 (require 'init-git)
 ;(require 'init-crontab)
 (require 'init-markdown)
 ;(require 'init-erlang)
-(require 'init-javascript)
+;(require 'init-javascript)
 (require 'init-org)
 (require 'init-org-mime)
-(require 'init-css)
-(require 'init-python-mode)
+;(require 'init-css)
+;(require 'init-python-mode)
 ;(require 'init-haskell)
 ;(require 'init-ruby-mode)
-(require 'init-lisp)
+;(require 'init-lisp)
 (require 'init-elisp)
 (require 'init-yasnippet)
 ;; Use bookmark instead
 (require 'init-zencoding-mode)
 ;(require 'init-cc-mode)
 ;(require 'init-gud)
-(require 'init-linum-mode)
+;(require 'init-linum-mode)
 ;; (require 'init-gist)
 ;(require 'init-moz)
 ;(require 'init-gtags)
@@ -98,8 +98,8 @@
 (require 'init-company)
 (require 'init-chinese-pyim) ;; cannot be idle-required
 ;; need statistics of keyfreq asap
-(require 'init-keyfreq)
-(require 'init-httpd)
+;(require 'init-keyfreq)
+;(require 'init-httpd)
 
 ;; projectile costs 7% startup time
 
@@ -107,13 +107,11 @@
 (require 'init-misc)
 
 ;; comment below line if you want to setup color theme in your own way
-(if (or (display-graphic-p) (string-match-p "256color"(getenv "TERM"))) (require 'init-color-theme))
+; (if (or (display-graphic-p) (string-match-p "256color"(getenv "TERM"))) (require 'init-color-theme))
 
 (require 'init-emacs-w3m)
 (require 'init-hydra)
 
-;;(require 'chinese-fonts-setup)
-;(require 'cal-china-x)
 
 ;; {{ idle require other stuff
 (setq idle-require-idle-delay 3)
@@ -129,7 +127,7 @@
                              init-emacspeak
                              init-artbollocks-mode
                              init-semantic))
-(idle-require-mode 1) ;; starts loading
+(idle-require-mode 0) ;; starts loading
 ;; }}
 
 (when (require 'time-date nil t)
@@ -153,15 +151,33 @@
  '(git-gutter:handled-backends (quote (svn hg git)))
  '(safe-local-variable-values (quote ((lentic-init . lentic-orgel-org-init))))
  '(session-use-package t nil (session)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(window-numbering-face ((t (:foreground "DeepPink" :underline "DeepPink" :weight bold))) t))
 
 (setq gc-cons-threshold best-gc-cons-threshold)
+
 ;;; Local Variables:
 ;;; no-byte-compile: t
 ;;; End:
 (put 'erase-buffer 'disabled nil)
+
+(require 'cal-china-x)
+(require 'chinese-fonts-setup)
+
+(setq mark-holidays-in-calendar t)
+(setq cal-china-x-important-holidays cal-china-x-chinese-holidays)
+(setq calendar-holidays cal-china-x-important-holidays)
+
+(set-locale-environment "zh_CN.utf-8")
+(setq-default org-display-custom-times t)
+(setq org-time-stamp-custom-formats '("<%Y-%m-%d %A>" . "<%Y-%m-%d %A %H:%M>"))
+
+
+(setq face-font-rescale-alist
+	  '(
+		(".*Kaiti SC.*" . 1.2)
+		(".*PingFang SC.*" . 1.2)
+     	(".*Heiti SC.*" . 1.1)))
+
+(setq org-src-fontify-natively t)
+(setq org-plantuml-jar-path "~/.emacs.d/scripts/plantuml.jar")
+
+(setq my-org-directory "~/Library/Mobile Documents/com~apple~CloudDocs/org-files/")

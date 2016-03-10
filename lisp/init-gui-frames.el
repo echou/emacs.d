@@ -3,7 +3,7 @@
 ;;----------------------------------------------------------------------------
 (setq use-file-dialog nil)
 (setq use-dialog-box nil)
-(setq inhibit-startup-screen f)
+(setq inhibit-startup-screen nil)
 (setq inhibit-startup-echo-area-message t)
 
 ;;----------------------------------------------------------------------------
