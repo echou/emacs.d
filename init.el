@@ -112,6 +112,9 @@
 (require 'init-emacs-w3m)
 (require 'init-hydra)
 
+;;(require 'chinese-fonts-setup)
+;(require 'cal-china-x)
+
 ;; {{ idle require other stuff
 (setq idle-require-idle-delay 3)
 (setq idle-require-symbols '(init-misc-lazy
