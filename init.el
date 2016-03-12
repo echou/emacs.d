@@ -183,3 +183,10 @@
 (setq org-plantuml-jar-path "~/.emacs.d/scripts/plantuml.jar")
 
 (setq my-org-directory "~/Library/Mobile Documents/com~apple~CloudDocs/org-files/")
+
+(require 'deft)
+(setq deft-extensions '("org" "txt" "tex"))
+(setq deft-directory my-org-directory)
+(setq deft-recursive t)
+(global-set-key [f8] 'deft)
+
